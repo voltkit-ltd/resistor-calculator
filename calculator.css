@@ -1,0 +1,61 @@
+.rc-page { max-width: 800px; margin: 0 auto; padding: 58px 24px 64px; color: #222c28; font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif; }
+.rc-page * { box-sizing: border-box; }
+.rc-page .rc-eyebrow { margin: 0 0 12px; font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #49745f; }
+.rc-page h1 { max-width: none; margin: 0; font-size: clamp(28px, 5vw, 40px); line-height: 1.2; letter-spacing: -.035em; color: #222c28; }
+.rc-page .rc-intro { margin: 12px 0 30px; color: #65716b; font-size: 15px; line-height: 1.6; }
+.rc { display: block; padding: 30px 30px 24px; background: #fff; border: 1px solid #dde3dc; border-radius: 20px; }
+.rc .rc-modes { padding: 0; margin: 0; border: 0; text-align: center; }
+.rc .rc-modes legend { float: none; width: 100%; padding: 0; margin-bottom: 12px; font-size: 12px; font-weight: 600; color: #66716b; }
+.rc .rc-mode-options { display: inline-flex; gap: 5px; padding: 5px; border-radius: 12px; background: #f2f4f0; }
+.rc .rc-mode-options label { position: relative; cursor: pointer; }
+.rc .rc-mode-options input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; }
+.rc .rc-mode-options span { display: block; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; color: #647168; }
+.rc .rc-mode-options input:checked + span { color: #fff; background: #285b43; box-shadow: 0 2px 4px #18352218; }
+.rc .rc-mode-options input:focus-visible + span { outline: 3px solid #78a58d; outline-offset: 3px; }
+.rc .rc-hint { text-align: center; color: #737d76; font-size: 12px; margin: 24px 0 8px; }
+.rc .rc-stage { position: relative; height: 220px; width: 100%; margin: 8px 0 0; }
+.rc .rc-wire { position: absolute; top: 72px; left: 0; right: 0; height: 7px; border-radius: 4px; background: linear-gradient(#9aa4a1, #dae1de 45%, #929d99); }
+.rc .rc-body { position: absolute; left: 9%; right: 9%; top: 26px; height: 100px; border: 1px solid #c2b493; border-radius: 27px; background: linear-gradient(180deg, #ddccab, #f5e8ce 24%, #e8d8b8 62%, #cdb98f); box-shadow: inset 0 2px 3px #fff8, inset 0 -3px 5px #89704220, 0 10px 18px #3936230b; }
+.rc .rc-band { position: absolute; left: var(--position); top: 27px; width: 44px; height: 181px; transform: translateX(-50%); text-align: center; }
+.rc .rc-stripe { position: absolute; left: 10px; width: 24px; height: 98px; background: linear-gradient(90deg, #0002, #fff2 35%, transparent 60%, #0002), var(--band-color); box-shadow: inset 1px 0 #0001, inset -1px 0 #0001; }
+.rc .rc-chevron { position: absolute; bottom: 9px; left: 0; right: 0; color: var(--band-ink); font-size: 18px; line-height: 1; }
+.rc .rc-band select { position: absolute; inset: 0 0 auto; height: 100px; width: 44px; opacity: 0; cursor: pointer; font-size: 16px; }
+.rc .rc-band:focus-within .rc-stripe { outline: 3px solid #285b43; outline-offset: 4px; }
+.rc .rc-connector { position: absolute; height: 28px; width: 1px; background: #c4cec6; top: 106px; left: 50%; }
+.rc .rc-connector::before { content: ''; position: absolute; top: -1px; left: -2px; width: 5px; height: 5px; border-top: 1px solid #a5b2a8; border-left: 1px solid #a5b2a8; transform: rotate(45deg); }
+.rc .rc-band-name { position: absolute; top: 142px; left: 50%; transform: translateX(-50%); color: #354239; font-size: 12px; font-weight: 600; cursor: pointer; }
+.rc .rc-band-number { position: absolute; top: 164px; left: 0; right: 0; color: #8a948c; font-size: 10px; }
+.rc .rc-result { text-align: center; padding: 2px 0 28px; }
+.rc .rc-result-label { font-size: 11px; color: #748177; text-transform: uppercase; letter-spacing: .14em; }
+.rc .rc-value { margin: 10px 0 0; font-size: clamp(29px, 6vw, 44px); color: #285b43; font-weight: 700; line-height: 1.2; letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
+.rc .rc-temperature { font-size: 12px; color: #65716b; margin: 12px 0 0; }
+.rc [hidden] { display: none; }
+.rc .rc-details { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.rc[data-count='5'] .rc-details, .rc[data-count='6'] .rc-details { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.rc .rc-detail { display: flex; flex-direction: column; gap: 10px; padding: 16px 14px; background: #f6f7f3; border: 1px solid #e9ece4; border-radius: 10px; }
+.rc .rc-detail-role { font-size: 11px; color: #6d786e; }
+.rc .rc-detail-color { display: flex; align-items: center; gap: 7px; font-size: 13px; color: #39453c; }
+.rc .rc-detail-color i { width: 10px; height: 10px; border-radius: 50%; box-shadow: inset 0 0 0 1px #0002; }
+.rc .rc-detail strong { color: #28382e; font-size: 17px; font-weight: 600; overflow-wrap: anywhere; }
+.rc .rc-note { margin: 20px 0 0; color: #7b857d; font-size: 11px; line-height: 1.7; text-align: center; }
+.rc-page .rc-footnote { margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: center; font-size: 11px; color: #778277; line-height: 1.6; }
+.rc-page .rc-footnote a { color: #49745f; text-decoration: underline; text-underline-offset: 3px; }
+.rc-standalone { margin: 0; background: #f6f6f2; }
+.rc-page noscript { display: block; margin: 16px 0; color: #865136; }
+@media (max-width: 540px) {
+  .rc-page { padding: 32px 16px 40px; }
+  .rc-page .rc-intro { margin-bottom: 22px; font-size: 14px; }
+  .rc { padding: 24px 16px 20px; border-radius: 16px; }
+  .rc .rc-mode-options { display: flex; width: min(100%, 290px); margin: 0 auto; }
+  .rc .rc-mode-options label { flex: 1; min-width: 0; }
+  .rc .rc-mode-options span { padding: 12px 6px; white-space: nowrap; }
+  .rc .rc-stage { height: 207px; }
+  .rc .rc-body { left: 4%; right: 4%; border-radius: 20px; }
+  .rc .rc-band { width: min(44px, 11%); }
+  .rc .rc-band select { width: 100%; }
+  .rc .rc-stripe { left: 50%; width: 18px; transform: translateX(-50%); }
+  .rc .rc-band-name { font-size: 10px; }
+  .rc .rc-details, .rc[data-count='5'] .rc-details, .rc[data-count='6'] .rc-details { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rc .rc-detail { padding: 14px; gap: 8px; }
+  .rc .rc-value { font-size: 34px; }
+}
